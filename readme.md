@@ -12,7 +12,7 @@ and [JavaScript module][js-api].
 
 ```toml
 [dependencies]
-levenshtein = "1.0.0"
+levenshtein = "1.0.1"
 ```
 
 ## Usage
