@@ -33,7 +33,7 @@ pub fn levenshtein(a: &str, b: &str) -> usize {
     let mut distance_b;
 
     while index_a < length_a {
-        index_a = index_a + 1;
+        index_a += 1;
         cache[index_a - 1] = index_a;
     }
 
@@ -69,5 +69,5 @@ pub fn levenshtein(a: &str, b: &str) -> usize {
         }
     }
 
-    return result;
+    result
 }
