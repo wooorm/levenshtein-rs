@@ -60,4 +60,4 @@ Given two strings, returns the edit distance between them.
 
 [c-api]: https://github.com/wooorm/levenshtein.c
 
-[js-api]: https://github.com/wooorm/levenshtein-edit-distance
+[js-api]: https://github.com/words/levenshtein-edit-distance
