@@ -6,14 +6,15 @@
  * Copyright (c) 2016 Titus Wormer <tituswormer@gmail.com>
  */
 pub fn levenshtein(a: &str, b: &str) -> usize {
-    let length_a = a.chars().count();
-    let length_b = b.chars().count();
     let mut result = 0;
 
     /* Shortcut optimizations / degenerate cases. */
     if a == b {
         return result;
     }
+    
+    let length_a = a.chars().count();
+    let length_b = b.chars().count();
 
     if length_a == 0 {
         return length_b;
