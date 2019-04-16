@@ -1,7 +1,7 @@
 [package]
 
 name = "levenshtein"
-version = "1.0.3"
+version = "1.0.4"
 authors = ["Titus Wormer <tituswormer@gmail.com>"]
 description = "Levenshtein algorithm"
 repository = "https://github.com/wooorm/levenshtein-rs"
