@@ -48,7 +48,7 @@ Given two strings, returns the edit distance between them.
 
 [travis]: https://travis-ci.org/wooorm/levenshtein-rs
 
-[license]: LICENSE
+[license]: license
 
 [author]: http://wooorm.com
 
