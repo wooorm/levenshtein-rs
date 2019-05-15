@@ -1,4 +1,6 @@
-# levenshtein.rs [![Build Status][travis-badge]][travis]
+# levenshtein.rs
+
+[![Build][build-badge]][build]
 
 Vladimir Levenshtein’s [edit distance algorithm][wiki] as a Rust
 library. There’s also a [C library][c-api], [C user command][c-cli],
@@ -44,9 +46,9 @@ Given two strings, returns the edit distance between them.
 
 <!-- Definitions -->
 
-[travis-badge]: https://img.shields.io/travis/wooorm/levenshtein-rs.svg
+[build-badge]: https://img.shields.io/travis/wooorm/levenshtein-rs.svg
 
-[travis]: https://travis-ci.org/wooorm/levenshtein-rs
+[build]: https://travis-ci.org/wooorm/levenshtein-rs
 
 [license]: license
 
