@@ -50,11 +50,11 @@ Given two strings, returns the edit distance between them.
 
 [license]: license
 
-[author]: http://wooorm.com
+[author]: https://wooorm.com
 
 [cargo]: https://crates.io
 
-[wiki]: http://en.wikipedia.org/wiki/Levenshtein_distance
+[wiki]: https://en.wikipedia.org/wiki/Levenshtein_distance
 
 [c-cli]: https://github.com/wooorm/levenshtein
 
