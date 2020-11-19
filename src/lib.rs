@@ -12,7 +12,7 @@ pub fn levenshtein(a: &str, b: &str) -> usize {
     if a == b {
         return result;
     }
-    
+
     let length_a = a.chars().count();
     let length_b = b.chars().count();
 
@@ -44,29 +44,30 @@ pub fn levenshtein(a: &str, b: &str) -> usize {
         distance_a = index_b;
 
         for (index_a, code_a) in a.chars().enumerate() {
-            distance_b = if code_a == code_b {
-                distance_a
+            if code_a == code_b {
+                result = distance_a;
+                distance_a = cache[index_a];
+                cache[index_a] = result;
             } else {
-                distance_a + 1
-            };
+                distance_b = distance_a + 1;
+                distance_a = cache[index_a];
 
-            distance_a = cache[index_a];
-
-            result = if distance_a > result {
-                if distance_b > result {
-                    result + 1
+                result = if distance_a > result {
+                    if distance_b > result {
+                        result + 1
+                    } else {
+                        distance_b
+                    }
                 } else {
-                    distance_b
-                }
-            } else {
-                if distance_b > distance_a {
-                    distance_a + 1
-                } else {
-                    distance_b
-                }
-            };
+                    if distance_b > distance_a {
+                        distance_a + 1
+                    } else {
+                        distance_b
+                    }
+                };
 
-            cache[index_a] = result;
+                cache[index_a] = result;
+            }
         }
     }
 
