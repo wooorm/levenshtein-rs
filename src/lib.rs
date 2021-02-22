@@ -5,7 +5,8 @@
  *
  * Copyright (c) 2016 Titus Wormer <tituswormer@gmail.com>
  */
-#[must_use] pub fn levenshtein(a: &str, b: &str) -> usize {
+#[must_use]
+pub fn levenshtein(a: &str, b: &str) -> usize {
     let mut result = 0;
 
     /* Shortcut optimizations / degenerate cases. */
