@@ -46,9 +46,9 @@ Given two strings, returns the edit distance between them.
 
 <!-- Definitions -->
 
-[build-badge]: https://img.shields.io/travis/wooorm/levenshtein-rs.svg
+[build-badge]: https://github.com/wooorm/levenshtein-rs/workflows/main/badge.svg
 
-[build]: https://travis-ci.org/wooorm/levenshtein-rs
+[build]: https://github.com/wooorm/levenshtein-rs/actions
 
 [license]: license
 
