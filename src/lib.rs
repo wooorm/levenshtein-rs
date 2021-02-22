@@ -5,14 +5,14 @@
  *
  * Copyright (c) 2016 Titus Wormer <tituswormer@gmail.com>
  */
-pub fn levenshtein(a: &str, b: &str) -> usize {
+#[must_use] pub fn levenshtein(a: &str, b: &str) -> usize {
     let mut result = 0;
 
     /* Shortcut optimizations / degenerate cases. */
     if a == b {
         return result;
     }
-    
+
     let length_a = a.chars().count();
     let length_b = b.chars().count();
 
@@ -52,12 +52,10 @@ pub fn levenshtein(a: &str, b: &str) -> usize {
                 } else {
                     distance_b
                 }
+            } else if distance_b > distance_a {
+                distance_a + 1
             } else {
-                if distance_b > distance_a {
-                    distance_a + 1
-                } else {
-                    distance_b
-                }
+                distance_b
             };
 
             cache[index_a] = result;
