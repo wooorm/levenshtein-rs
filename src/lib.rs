@@ -6,7 +6,7 @@
  * Copyright (c) 2016 Titus Wormer <tituswormer@gmail.com>
  */
 #[must_use]
-pub fn levenshtein(a: &str, b: &str) -> usize {
+pub fn distance(a: &str, b: &str) -> usize {
     let mut result = 0;
 
     /* Shortcut optimizations / degenerate cases. */
@@ -64,4 +64,8 @@ pub fn levenshtein(a: &str, b: &str) -> usize {
     }
 
     result
+}
+
+pub fn closest<'a>(a: &str, pool: &[&'a str]) -> Option<&'a str> {
+    pool.iter().min_by_key(|el| self::distance(a, el)).copied()
 }
