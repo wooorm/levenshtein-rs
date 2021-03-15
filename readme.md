@@ -23,10 +23,14 @@ levenshtein = "1.0.5"
 
 ```rust
 extern crate levenshtein;
-use levenshtein::levenshtein;
+use levenshtein::{closest, distance};
 
 fn main() {
-    println!("{}", levenshtein("kitten", "sitting"));
+    println!("{}", distance("kitten", "sitting"));
+    println!(
+        "{}",
+        closest("levenshtein", &["frankenstein", "einstein"]).unwrap()
+    );
 }
 ```
 
@@ -34,13 +38,16 @@ Yields:
 
 ```txt
 3
+einstein
 ```
 
 ## API
 
-### `fn levenshtein(a: &str, b: &str) -> usize`
-
+### `fn distance(a: &str, b: &str) -> usize`
 Given two strings, returns the edit distance between them.
+
+### `fn closest<'a>(a: &str, pool: &['a &str]) -> Option<&'a str>`
+Given one string and an array of strings, returns the first closest string from the pool.
 
 ## License
 
