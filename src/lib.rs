@@ -30,16 +30,14 @@ pub fn levenshtein(a: &str, b: &str) -> usize {
      * This is why it’s fast, normally a matrix is used,
      * here we use a single vector. */
     let mut cache: Vec<usize> = (1..).take(length_a).collect();
-    let mut distance_a;
-    let mut distance_b;
 
     /* Loop. */
     for (index_b, code_b) in b.chars().enumerate() {
         result = index_b;
-        distance_a = index_b;
+        let mut distance_a = index_b;
 
         for (index_a, code_a) in a.chars().enumerate() {
-            distance_b = if code_a == code_b {
+            let distance_b = if code_a == code_b {
                 distance_a
             } else {
                 distance_a + 1
