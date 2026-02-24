@@ -8,7 +8,7 @@ repository = "https://github.com/wooorm/levenshtein-rs"
 readme = "readme.md"
 keywords = ["Vladimir", "Levenshtein", "algorithm", "edit", "distance"]
 license = "MIT"
-include = ["src/lib.rs", "Cargo.toml"]
+include = ["src/lib.rs", "Cargo.toml", "license"]
 
 [lib]
 
