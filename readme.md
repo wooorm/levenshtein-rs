@@ -41,6 +41,15 @@ Yields:
 ### `fn levenshtein(a: &str, b: &str) -> usize`
 
 Given two strings, returns the edit distance between them.
+## Unicode text
+
+This implementation iterates over Rust `char` values, so the edit distance is calculated over Unicode scalar values rather than UTF-8 bytes.
+
+Canonically equivalent strings can still have different underlying scalar-value sequences. For example, a precomposed character and the same visible character represented by a base character plus a combining mark can produce different edit distances unless the inputs are normalized first.
+
+Unicode scalar values are also not always the same as user-perceived characters. A visible character can consist of multiple scalar values, including combining sequences and emoji sequences. Applications that require one visible character to count as one edit may therefore need grapheme-cluster segmentation before calculating the distance.
+
+For additional background on normalization, grapheme segmentation, and Unicode transformations in edit-distance processing, see [Unicode text transformations and edit distance](https://www.levenshtein.net/unicode-text-transformations).
 
 ## License
 
